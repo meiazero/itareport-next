@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# :checkered_flag: ITAREPORT
 
-## Getting Started
+Nosso projeto possibilita que o usuário possa fazer denúncias(reports), com o intuito de aprimorar socialmente e como comunidade a cidade de Itapajé, relatando um problema estrutural, acidente de carro, falta de acessibilidade ou alguma ação prejudicial ao meio ambiente.
 
-First, run the development server:
+## :technologist: Membros da equipe e Orientador
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+-   _538897_ - Antonio Lucas Melo de Sousa.
+-   _539355_ - José Eric Mesquita Coelho.
+-   _540910_ - Matheus Feitosa de Oliveira Rabelo.
+-   XXXXXX - Anderson Gonçalves Uchôa.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+> Usuário Anonimo: Ele poderá acessar o site normalmente, podendo visualizar o mapa de denúncias, mas não terá a
+> possibilidade de fazer as ações de um usuário logado.
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.js`.
+> Usuário Padrão Logado: Ele poderá acessar o site, podendo visualizar o mapa de denúncias, confirmar uma denúncia,
+> criar uma denúncias. Ele não poderá criar uma categoria, ou alterar alguma configuração do sistema.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## :spiral_calendar: Entidades ou tabelas do sistema
 
-## Learn More
+Liste as principais entidades do sistema.
 
-To learn more about Next.js, take a look at the following resources:
+-   Usuário
+-   Denúncia
+-   Endereço
+-   Imagem
+-   Categoria
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## :triangular_flag_on_post: Principais funcionalidades da aplicação
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Descreve ou liste brevemente as principais funcionalidades da aplicação que será desenvolvida. Destaque a
+funcionalidades que serão acessíveis a todos os usuários e aquelas restritas a usuários logados.
 
-## Deploy on Vercel
+> Usuários Anonimo:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-   Cadastrar
+-   Logar
+-   Visualizar denúncias
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> Usuários Logados:
+
+-   Criar uma denúncia
+-   Confirmar uma denúncia
+-   Recuperar senha
+-   Filtrar denúncia
+
+---
+
+:warning::warning::warning: As informações a seguir devem ser enviadas juntamente com a versão final do projeto. :warning::warning::warning:
+
+---
+
+## :desktop_computer: Tecnologias utilizados
+
+**Frontend:**
+
+Lista as tecnologias, frameworks e bibliotecas utilizados.
+
+-   React
+-   Bootstrap
+
+**Backend:**
+
+Lista as tecnologias, frameworks e bibliotecas utilizados.
+
+-   Node.js
+-   PostgreSQL
+-   Prisma
+
+## :shipit: Operações implementadas para cada entidade da aplicação
+
+| Entidade   | Criação | Leitura | Atualização | Remoção |
+| ---------- | ------- | ------- | ----------- | ------- |
+| Entidade 1 | X       | X       |             | X       |
+| Entidade 2 | X       |         | X           | X       |
+| Entidade 3 | X       |         |             |         |
+
+> Lembre-se que é necessário implementar o CRUD de pelo menos duas entidades.
+
+## :neckbeard: Rotas da API REST utilizadas
+
+| Método HTTP | URL            |
+| ----------- | -------------- |
+| GET         | api/entidade1/ |
+| POST        | api/entidade2  |
+
+## Documentação
+
+-   [Documento de visão do projeto](https://github.com/anderson-uchoa/github-template-projeto-integrador/blob/main/docs/documento_visao.docx)
+-   [Regras gerais da disciplina](https://github.com/anderson-uchoa/github-template-projeto-integrador/blob/main/docs/regras_gerais.pdf)
+-   [Apresentação do Projeto] :hourglass: - Vídeo a ser criado
