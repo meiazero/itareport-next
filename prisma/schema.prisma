@@ -1,17 +1,3 @@
-// datasource db {
-//   provider          = "postgresql"
-//   url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
-//   directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
-//   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
-// }
-
-// datasource db {
-//   provider          = "postgresql"
-//   url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
-//   directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
-//   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
-// }
-
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
@@ -21,15 +7,13 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Usuario {
-  id        String       @id @default(uuid()) @db.Uuid
-  createdAt DateTime     @default(now())
-  email     String       @unique
-  name      String     @db.VarChar(255)
-  password  String     @db.VarChar(255)
+model User {
+  id        String     @id @default(uuid()) @db.Uuid
+  createdAt DateTime   @default(now())
+  email     String     @unique
+  name      String
+  password  String
   denuncias Denuncia[]
-
-  @@map("usuarios")
 }
 
 model Denuncia {
@@ -40,6 +24,5 @@ model Denuncia {
   title     String   @db.VarChar(255)
   content   String   @db.Text
   userId    String   @db.Uuid
-  user      Usuario  @relation(fields: [userId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
 }
-
