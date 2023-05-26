@@ -10,6 +10,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+    --background-primary: #212425;
+    --background-secondary: #ffffff;
+    --text-primary: #ebf2f5;
+    --text-secondary: #5c8599;
+}
+
+body {
+    background: var(--background-primary);
+    color: var(--text-primary);
+}
+
 /* map style */
 .leaflet-container {
     height: calc(100vh - 120px);
