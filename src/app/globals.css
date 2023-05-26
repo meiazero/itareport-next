@@ -16,20 +16,15 @@
 
 body {
     font-size: 1.6rem;
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh;
+    width: 100vw; */
 }
 
 /* map style */
 
-#page-map {
-    width: 100vw;
-    height: 100vh;
-}
-
 .leaflet-container {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: calc(100vw-100px);
     z-index: 1;
 }
 
