@@ -57,14 +57,16 @@ funcionalidades que serão acessíveis a todos os usuários e aquelas restritas 
 
 Lista as tecnologias, frameworks e bibliotecas utilizados.
 
--   React
--   Bootstrap
+-   NextJS 13
+-   Tailwind CSS
+-   Leaflet
 
 **Backend:**
 
 Lista as tecnologias, frameworks e bibliotecas utilizados.
 
 -   Node.js
+-   TypeScript
 -   PostgreSQL
 -   Prisma
 
@@ -90,3 +92,5 @@ Lista as tecnologias, frameworks e bibliotecas utilizados.
 -   [Documento de visão do projeto](https://github.com/anderson-uchoa/github-template-projeto-integrador/blob/main/docs/documento_visao.docx)
 -   [Regras gerais da disciplina](https://github.com/anderson-uchoa/github-template-projeto-integrador/blob/main/docs/regras_gerais.pdf)
 -   [Apresentação do Projeto] :hourglass: - Vídeo a ser criado
+
+> Para replicar esse projeto siga [esse](./installation.md) tutorial.
