@@ -11,25 +11,25 @@
 }
 
 :root {
-    font-size: 62.5%;
+    --background-primary: #212425;
+    --background-secondary: #ffffff;
+    --text-primary: #ebf2f5;
+    --text-secondary: #5c8599;
 }
 
 body {
-    font-size: 1.6rem;
-    /* height: 100vh;
-    width: 100vw; */
+    background: var(--background-primary);
+    color: var(--text-primary);
 }
 
 /* map style */
-
 .leaflet-container {
-    height: 100vh;
+    height: calc(100vh - 120px);
     width: calc(100vw-100px);
     z-index: 1;
 }
 
 /* Pop Up - Marker */
-
 .leaflet-popup-content-wrapper {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
@@ -56,7 +56,6 @@ body {
 }
 
 /* Styling react select */
-
 .filter__control {
     border-radius: 20px !important;
 

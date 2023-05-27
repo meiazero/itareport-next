@@ -1,9 +1,9 @@
 export default function Header() {
     return (
-        <header className='flex items-center justify-between bg-gray-900 py-10 px-6'>
-            <div className='text-white text-3xl font-bold'>Brand Name</div>
+        <header className='flex items-center justify-between bg-gray-900 py-5 px-6'>
+            <div className='text-white text-3xl font-bold'>Itareport</div>
             <nav className='space-x-5'>
-                <a href='#' className='text-white'>
+                <a href='/login' className='text-white'>
                     logar
                 </a>
                 <a

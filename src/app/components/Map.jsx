@@ -4,14 +4,14 @@ import "leaflet/dist/leaflet.css"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 
 export default function Map() {
-    const position = [-3.6836, -39.5816]
+    const position = [-3.6764309, -39.5850531, 6]
+
     const pin = L.icon({
-        iconUrl: "pinmap.svg",
-        iconSize: [32, 32],
+        iconUrl: "megaphone.svg",
+        iconSize: [20, 20],
         iconAnchor: [24, 48],
         popupAnchor: [0, -48]
     })
-
     return (
         <MapContainer
             center={position}
