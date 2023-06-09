@@ -21,27 +21,12 @@ model Usuario {
 }
 
 model Denuncia {
-  id               String                @id @default(uuid()) @db.Uuid
-  createdAt        DateTime              @default(now())
-  updatedAt        DateTime              @updatedAt
-  validated        Boolean               @default(false)
-  title            String                @db.VarChar(255)
-  content          String                @db.Text
-  userId           String                @db.Uuid
-  user             Usuario               @relation(fields: [userId], references: [id])
-  DenunciaLocation LocalizacaoDenuncia[]
-
-  @@map("denuncias")
-}
-
-model LocalizacaoDenuncia {
-  id         String   @id @default(uuid()) @db.Uuid
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-  denunciaId String   @db.Uuid
-  denuncia   Denuncia @relation(fields: [denunciaId], references: [id])
-  latitude   Float
-  longitude  Float
-
-  @@map("localizacao_denuncia")
+  id        String   @id @default(uuid()) @db.Uuid
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  validated Boolean  @default(false)
+  title     String   @db.VarChar(255)
+  content   String   @db.Text
+  userId    String   @db.Uuid
+  user      Usuario  @relation(fields: [userId], references: [id])
 }
