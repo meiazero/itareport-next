@@ -3,8 +3,8 @@ CREATE TABLE "Usuario" (
     "id" UUID NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "email" TEXT NOT NULL,
-    "name" TEXT NOT NULL,
-    "password" TEXT NOT NULL,
+    "name" VARCHAR(255) NOT NULL,
+    "password" VARCHAR(255) NOT NULL,
 
     CONSTRAINT "Usuario_pkey" PRIMARY KEY ("id")
 );

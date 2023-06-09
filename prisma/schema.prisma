@@ -13,8 +13,8 @@ model Usuario {
   id        String   @id @default(uuid()) @db.Uuid
   createdAt DateTime @default(now())
   email     String   @unique
-  name      String
-  password  String
+  name      String  @db.VarChar(255)
+  password  String  @db.VarChar(255)
   denuncias Denuncia[]
 }
 
@@ -26,5 +26,5 @@ model Denuncia {
   title     String   @db.VarChar(255)
   content   String   @db.Text
   userId    String   @db.Uuid
-  user      Usuario     @relation(fields: [userId], references: [id])
+  user      Usuario  @relation(fields: [userId], references: [id])
 }
