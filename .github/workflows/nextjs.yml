@@ -42,7 +42,7 @@ jobs:
             - name: Setup Node
               uses: actions/setup-node@v3
               with:
-                  node-version: '16'
+                  node-version: '18.15.0'
                   cache: ${{ steps.detect-package-manager.outputs.manager }}
 
             - name: Setup Pages
@@ -63,13 +63,13 @@ jobs:
               run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
             - name: Build with Next.js
-              run: ${{ steps.detect-package-manager.outputs.runner }} next build
+              run: ${{ steps.detect-package-manager.outputs.runner }} run build
 
             - name: Static HTML export with Next.js
               run: ${{ steps.detect-package-manager.outputs.runner }}
 
             - name: Upload artifact
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v3
               with:
                   name: pages
                   path: ./out
