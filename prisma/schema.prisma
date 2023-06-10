@@ -5,11 +5,16 @@
 //   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
 // }
 
+// datasource db {
+//   provider          = "postgresql"
+//   url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
+//   directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+//   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
+// }
+
 datasource db {
   provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
-  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
+  url      = env("DATABASE_URL")
 }
 
 generator client {
@@ -17,11 +22,11 @@ generator client {
 }
 
 model Usuario {
-  id        String     @id @default(uuid()) @db.Uuid
-  createdAt DateTime   @default(now())
-  email     String     @unique
-  name      String  @db.VarChar(255)     @db.VarChar(255)
-  password  String  @db.VarChar(255)     @db.VarChar(255)
+  id        String       @id @default(uuid()) @db.Uuid
+  createdAt DateTime     @default(now())
+  email     String       @unique
+  name      String     @db.VarChar(255)
+  password  String     @db.VarChar(255)
   denuncias Denuncia[]
 
   @@map("usuarios")
@@ -35,5 +40,6 @@ model Denuncia {
   title     String   @db.VarChar(255)
   content   String   @db.Text
   userId    String   @db.Uuid
-  user      Usuario     @relation(fields: [userId], references: [id])
+  user      Usuario  @relation(fields: [userId], references: [id])
 }
+
