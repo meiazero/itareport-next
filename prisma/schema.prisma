@@ -21,6 +21,8 @@ model Usuario {
   name      String     @db.VarChar(255)
   password  String     @db.VarChar(255)
   denuncias Denuncia[]
+
+  @@map("usuarios")
 }
 
 model Denuncia {
@@ -33,6 +35,8 @@ model Denuncia {
   userId           String                @db.Uuid
   user             Usuario               @relation(fields: [userId], references: [id])
   DenunciaLocation LocalizacaoDenuncia[]
+
+  @@map("denuncias")
 }
 
 model LocalizacaoDenuncia {
@@ -43,4 +47,6 @@ model LocalizacaoDenuncia {
   denuncia   Denuncia @relation(fields: [denunciaId], references: [id])
   latitude   Float
   longitude  Float
+
+  @@map("localizacao_denuncia")
 }
