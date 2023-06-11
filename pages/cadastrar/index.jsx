@@ -43,7 +43,7 @@ export default function Cadastrar() {
         const hashedPassword = hashPassword(password)
 
         axios
-            .post("http://localhost:3000/api/criar-usuario", {
+            .post("http://localhost:4000/api/usuario/criar", {
                 name,
                 email,
                 password: hashedPassword

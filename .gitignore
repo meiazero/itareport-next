@@ -4,8 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-pnpm-lock.yaml
-package-lock.json
 
 # testing
 /coverage
@@ -39,6 +37,17 @@ next-env.d.ts
 # vscode
 .vscode/
 
-# dotenv 
+# macos stuff
+.DS_Store
+
+# windows stuff
+Thumbs.db
+
+# secrets
 .env
 .env.production
+
+# package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
