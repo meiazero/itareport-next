@@ -1,7 +1,7 @@
 "use client"
 
 import { React, useState } from "react"
-import { SHA256 } from "crypto-js"
+import { hashSync } from "bcryptjs"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -24,7 +24,10 @@ export default function Cadastrar() {
     }
 
     const hashPassword = (password) => {
-        return SHA256(password).toString()
+        const saltRounds = 10
+        const hashedPassword = hashSync(password, saltRounds)
+
+        return hashedPassword
     }
 
     const handleSubmit = (e) => {
@@ -43,7 +46,7 @@ export default function Cadastrar() {
         const hashedPassword = hashPassword(password)
 
         axios
-            .post("http://localhost:3000/api/criar-usuario", {
+            .post("http://localhost:3000/api/usuario/criar", {
                 name,
                 email,
                 password: hashedPassword
