@@ -39,6 +39,12 @@ next-env.d.ts
 # vscode
 .vscode/
 
+# package manager lock
+pnpm-lock.yaml
+.package-lock.json
+yarn.lock
+
+
 # dotenv 
 .env
 .env.production
