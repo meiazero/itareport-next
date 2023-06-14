@@ -7,15 +7,20 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
+        "test": "jest",
+        "babel": "babel",
         "postinstall": "npx prisma generate"
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+        },
+        "testEnvironment": "node"
     },
     "dependencies": {
         "@prisma/client": "^4.15.0",
-        "autoprefixer": "10.4.14",
         "axios": "^1.4.0",
         "bcryptjs": "^2.4.3",
-        "eslint": "8.41.0",
-        "eslint-config-next": "13.4.3",
         "leaflet": "^1.9.4",
         "next": "13.4.3",
         "postcss": "8.4.23",
@@ -25,12 +30,12 @@
         "tailwindcss": "3.3.2"
     },
     "devDependencies": {
-        "@types/express": "^4.17.17",
-        "@types/node": "^20.2.4",
-        "@types/react": "^18.2.7",
-        "@types/react-dom": "^18.2.4",
-        "prisma": "^4.15.0",
-        "ts-node": "^10.9.1",
-        "typescript": "^5.0.4"
+        "@babel/preset-env": "^7.22.5",
+        "autoprefixer": "10.4.14",
+        "babel-jest": "^29.5.0",
+        "eslint": "8.41.0",
+        "eslint-config-next": "13.4.3",
+        "jest": "^29.5.0",
+        "prisma": "^4.15.0"
     }
 }

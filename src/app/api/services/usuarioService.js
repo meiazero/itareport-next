@@ -1,4 +1,3 @@
-// app/api/services/userService.ts
 import prismaClient from "../../config/prismaClient"
 
 export async function createUserService(name, email, password) {
