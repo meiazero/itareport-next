@@ -46,7 +46,7 @@ export default function Cadastrar() {
         const hashedPassword = hashPassword(password)
 
         axios
-            .post("http://localhost:3000/api/usuario/criar", {
+            .post("http://localhost:3030/user", {
                 name,
                 email,
                 password: hashedPassword
@@ -76,89 +76,89 @@ export default function Cadastrar() {
     return (
         <>
             <Header />
-            <div className="max-w-2xl mx-auto my-2 py-3 bg-white rounded-md">
-                <h1 className="text-4xl text-center font-semibold mb-5 mt-2 text-gray-700">
+            <div className='max-w-2xl mx-auto my-2 py-3 bg-white rounded-md'>
+                <h1 className='text-4xl text-center font-semibold mb-5 mt-2 text-gray-700'>
                     Cadastrar
                 </h1>
                 <form
                     onSubmit={handleSubmit}
-                    className="px-8 pt-6 pb-8 mb-4"
-                    method="POST"
-                    autoComplete="off"
+                    className='px-8 pt-6 pb-8 mb-4'
+                    method='POST'
+                    autoComplete='off'
                 >
-                    <div className="mb-4">
+                    <div className='mb-4'>
                         <label
-                            className="block text-gray-700 text-2xl mb-4"
-                            htmlFor="name"
+                            className='block text-gray-700 text-2xl mb-4'
+                            htmlFor='name'
                         >
                             Nome
                         </label>
                         <input
-                            type="text"
-                            id="name"
-                            className="shadow appearance-none border rounded-sm w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Digite seu e-mail"
+                            type='text'
+                            id='name'
+                            className='shadow appearance-none border rounded-sm w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                            placeholder='Digite seu e-mail'
                             value={name}
                             required
                             onChange={(e) => setName(e.target.value)}
                         />
                     </div>
-                    <div className="mb-4">
+                    <div className='mb-4'>
                         <label
-                            className="block text-gray-700 text-2xl mb-4"
-                            htmlFor="email"
+                            className='block text-gray-700 text-2xl mb-4'
+                            htmlFor='email'
                         >
                             E-mail
                         </label>
                         <input
-                            type="email"
-                            id="email"
-                            className="shadow appearance-none border rounded-sm w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Digite seu e-mail"
+                            type='email'
+                            id='email'
+                            className='shadow appearance-none border rounded-sm w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                            placeholder='Digite seu e-mail'
                             value={email}
                             required
                             onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
-                    <div className="mb-6">
+                    <div className='mb-6'>
                         <label
-                            className="block text-gray-700 text-2xl mb-4"
-                            htmlFor="password"
+                            className='block text-gray-700 text-2xl mb-4'
+                            htmlFor='password'
                         >
                             Senha
                         </label>
                         <input
-                            type="password"
-                            id="password"
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Digite sua senha"
+                            type='password'
+                            id='password'
+                            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                            placeholder='Digite sua senha'
                             value={password}
                             required
                             onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
 
-                    <div className="mb-6">
+                    <div className='mb-6'>
                         <label
-                            className="block text-gray-700 text-2xl mb-4"
-                            htmlFor="surpassword"
+                            className='block text-gray-700 text-2xl mb-4'
+                            htmlFor='surpassword'
                         >
                             Confirmar senha
                         </label>
                         <input
-                            type="password"
-                            id="surpassword"
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Digite sua senha"
+                            type='password'
+                            id='surpassword'
+                            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+                            placeholder='Digite sua senha'
                             value={surPassword}
                             required
                             onChange={(e) => setSurPassword(e.target.value)}
                         />
                     </div>
-                    <div className="flex items-center justify-end ">
+                    <div className='flex items-center justify-end '>
                         <button
-                            type="submit"
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type='submit'
+                            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
                         >
                             Entrar
                         </button>
