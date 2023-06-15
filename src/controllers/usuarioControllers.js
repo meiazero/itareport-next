@@ -15,9 +15,12 @@ async function createUser(req, res) {
 
         usuario = await userService.createUser(name, email, password)
 
+        usuarioWithoutPassword = { ...usuario }
+        delete usuarioWithoutPassword.password
+
         return res.json({
             success: true,
-            data: usuario,
+            data: usuarioWithoutPassword,
             message: "User created successfully"
         })
     } catch (error) {
